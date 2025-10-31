@@ -31,3 +31,4 @@ for concepto in conceptos:
         print(f"{turno:<20} | {dia:<12} | {horas_ini:<7} | {horas_fin:<7} | {concep:<25} | {horas:<5} ")
 
 
+input()

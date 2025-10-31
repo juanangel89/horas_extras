@@ -1,5 +1,4 @@
 class Funciones:
-    
 
     concepto_dia = []
 
@@ -43,23 +42,7 @@ class Funciones:
         
         sigdia, sig_es_festv=cls.validar_siguiente_dia (dia)
 
-        
-        if(turno.upper() =='D' and dia=='domingo'):
-            print('Turno diurno festivo')
-            hora_ini=cls.turno_diurno['hora_ini']
-            hora_fin=cls.turno_diurno['hora_fin']
-            concepto_final,horas_totales=cls.calcular_concepto (hora_ini,hora_fin,horas_totales,dia,sig_es_festv,sigdia,turno)
-            cls.concepto_dia.append(concepto_final)
-
-        elif(turno.upper() =='N' and dia=='domingo'):
-            print('Turno nocturno festivo')
-            cls.horas_partidas=cls.partir_horas_nocturnas()
-            for dato in cls.horas_partidas:
-                concepto_final,horas_totales=cls.calcular_concepto (dato['inicio'],dato['final'],horas_totales,dia,sig_es_festv,sigdia,turno)
-                cls.concepto_dia.append(concepto_final)
-
-
-        elif(turno.upper() =='D'):
+        if(turno.upper() =='D'):
             print('Turno diurno')
             hora_ini=cls.turno_diurno['hora_ini']
             hora_fin=cls.turno_diurno['hora_fin']
